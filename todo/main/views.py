@@ -8,5 +8,8 @@ def test(request):
     return render(request, "test")
 
 def second(request):
-    return HttpResponse("test")
+    return HttpResponse("test2")
+
+def third(request):
+    return HttpResponse("this third test page")
 
