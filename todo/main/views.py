@@ -4,4 +4,9 @@ from django.shortcuts import render, HttpResponse
 def homepage(request):
     return render(request, "index.html")
 
-# Create your views here.
+def test(request):
+    return render(request, "test")
+
+def second(request):
+    return HttpResponse("test")
+
