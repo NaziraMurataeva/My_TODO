@@ -18,3 +18,5 @@ def third(request):
 def somepage(request):
     return render(request, "fourth.html")
 
+def books(request):
+    return render(request, "books.html")
