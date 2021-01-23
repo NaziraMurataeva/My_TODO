@@ -6,8 +6,13 @@
     <title>Document</title>
 </head>
 <body> 
+    <h1> books</h1>
+    {% for books in books %}
     <div>
-        <H3></H3>
-    </div>
+        <H3>{{books.title}}</H3>
+        <H5>{{books.autor}}</H5>
+        <p>{{books.price}} </p>
+    </div> <hr>
+    {% endfor %}
 </body>
 </html>
