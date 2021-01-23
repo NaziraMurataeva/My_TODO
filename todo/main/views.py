@@ -3,7 +3,7 @@ from .models import ToDo
 
 
 def homepage(request):
-    return render(request, "index.html")
+    return render(request, "index.html",)
 
 def test(request):
     return render(request, "test.html")
@@ -15,6 +15,6 @@ def second(request):
 def third(request):
     return render(request, "third.html")
 
-def fourth(request):
-    return fourth(request, "fourth.html")
+def somepage(request):
+    return render(request, "fourth.html")
 
