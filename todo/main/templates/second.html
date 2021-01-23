@@ -6,8 +6,7 @@
     <title>second page</title>
 </head>
 <body>
-    <script>
-        alert('Ваша запись была удалена')
-    </script>
-</body>
+   {% for todo in todo_list %}
+  <h3> {{todo.text}}-{{ todo.created_at }}</h3> 
+   {% endfor %}
 </html>
