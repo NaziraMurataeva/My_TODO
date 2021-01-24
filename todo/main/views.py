@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse,redirect
 from .models import ToDo, Books
 
 
@@ -26,7 +26,7 @@ def books(request):
 def add_todo(request):
     form = request.POST
     text = form["todo_text"]
-    todo = ToDo(text = text)
+    todo = ToDo(text=text)
     todo.save()
     return redirect(second)
 
@@ -44,4 +44,9 @@ def add_book(request):
     )
     book.save()
     return redirect(books)
+
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(second)
 

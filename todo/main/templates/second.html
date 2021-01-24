@@ -13,7 +13,7 @@
 <body>
     <section>
         <div class="create_container"> 
-            <form action="(% url 'add-todo' %)" method = "POST">
+            <form action="(% url 'add-todo' %}" method = "POST">
                 {% csrf_token %}
                 <input class= "create_input" type="text" placeholder="Напишите сюда новую задачу" 
                         name = "todo_text" />
@@ -34,7 +34,7 @@
                 <p>{{ todo.created_at }}</p>
                 <div class= "action_buttons">
                     <img src="{% static './item/star.png' %}" />
-                    <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/>
+                    <a href="{% url 'delete-todo' todo.id %}"> <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/> </a>
                 </div>
             </div>
            </div>

@@ -8,8 +8,8 @@
     <title>Document</title>
 </head>
 <body> 
-    <form action="(% url 'add-book' %)" method = "POST">
-        {% csrf_token %}>
+    <form action="{% url 'add-book' %}" method ="POST">
+        {% csrf_token %}
         <input class= "create_input" type="text" placeholder="Введите названия книги" 
         name = "title" /> <br>
         <input class= "create_input" type="text" placeholder="Подзаголовок"  
