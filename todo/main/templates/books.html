@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body  background= "{% static 'item/image_2.jpg' %}" > 
+    <h1> BOOKS</h1>
     <div class="create_container">
-        <form action="{% url 'add-book' %}" method ="POST">
+        <form action="{% url 'add-book' %}" method="POST">
         {% csrf_token %}
             <input class= "create_input" type="text" placeholder="Введите названия книги" 
             name = "title" /> <br>
@@ -31,22 +32,18 @@
         <button class= create_button> Добавить книгу </button>
     </form>
     </div>
-    <h1> BOOKS</h1>
+    
     <div class="book_container">
     {% for books in books %}
     
         <div class="book_item">
             <H3>{{books.title}}</H3>
-            <H5>{{books.subtitle}}</H5>
-            <p>{{books.description}}</p>
-            <p>{{books.genre}} </p>
             <p>{{books.author}} </p>
-            <p>{{books.year}} </p>
-            <p>{{books.date}} </p>
             <H4>{{books.price}}</H4>
             <div class= "action_buttons">
-                <button> <a href="{% url 'delete-book' books.id %}"> <img src="{% static 'item/star.png' %}" /> </a> </button>
-            <button><a href="{% url 'delete-book' books.id %}"> <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/> </a> </button> 
+                <button class="fav_book_but"> <a href="{% url 'delete-book' books.id %}"> В Избранное </a> </button>
+            <button class="del_book_but"><a href="{% url 'delete-book' books.id %}"> <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/> </a> </button> 
+            <button class="det_book_but"><a href="{% url 'details' books.id %}"> Details </a> </button>
             </div>
         </div> 
         {% endfor %}

@@ -25,7 +25,7 @@ def books(request):
 
 def add_todo(request):
     form = request.POST
-    text = form["todo_text"]
+    text=form["todo_text"]
     todo = ToDo(text=text)
     todo.save()
     return redirect(second)
@@ -33,14 +33,14 @@ def add_todo(request):
 def add_book(request):
     form = request.POST
     book = Books (
-        title= form[title],
-        subtitle= form[subtitle],
-        description=form[description],
-        genre=form[genre],
-        author=form[author],
-        year= form[year],
-        date=form[date],
-        price=form[price],
+        title=form["title"],
+        subtitle=form["subtitle"],
+        description=form["description"],
+        genre=form["genre"],
+        author=form["author"],
+        year= form["year"][:10],
+        date=form["date"][:10],
+        price=form["price"],
     )
     book.save()
     return redirect(books)
@@ -60,3 +60,9 @@ def mark_todo(request, id):
     todo.is_favorite =True
     todo.save()
     return redirect(second)
+
+
+def details(request ,id):
+    books_object = Books.objects.get(id=id)
+    return render(request, "books_detail.html", {"books_object": books_object} )
+

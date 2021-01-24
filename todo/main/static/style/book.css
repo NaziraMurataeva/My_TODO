@@ -51,3 +51,45 @@ h1{
     background-color: #82ff91;
     border: 2px solid #6afab2;
 }
+.fav_book_but{
+    padding: 12px 20px;
+    background-color: #225ba7;
+    border: 1px solid #452d99;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.fav_book_but:active{
+    border: 1px solid #cc3300;
+    box-shadow: 2px 2px 5px 3px #FCE4EC;
+}
+.del_book_but{
+    padding: 12px 20px;
+    background-color: #225ba7;
+    border: 1px solid #452d99;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.del_book_but:active{
+    border: 1px solid #cc3300;
+    box-shadow: 2px 2px 5px 3px #FCE4EC;
+}
+.det_book_but{
+        padding: 12px 20px;
+        background-color: #225ba7;
+        border: 1px solid #452d99;
+        color: white;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+.det_book_but:active{
+        border: 1px solid #cc3300;
+        box-shadow: 2px 2px 5px 3px #FCE4EC;
+}
