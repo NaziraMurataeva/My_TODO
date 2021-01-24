@@ -16,4 +16,5 @@ class Books(models.Model):
     year = models.DateField()
     date = models.DateField(auto_now_add=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    is_favorite = models.BooleanField(default=False)
     

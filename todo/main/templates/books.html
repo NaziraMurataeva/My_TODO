@@ -4,38 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/book.css' %}" />
     <title>Document</title>
 </head>
-<body> 
-    <form action="{% url 'add-book' %}" method ="POST">
+<body  background= "{% static 'item/image_2.jpg' %}" > 
+    <div class="create_container">
+        <form action="{% url 'add-book' %}" method ="POST">
         {% csrf_token %}
-        <input class= "create_input" type="text" placeholder="Введите названия книги" 
-        name = "title" /> <br>
-        <input class= "create_input" type="text" placeholder="Подзаголовок"  
-        name = "subtitle" />  <br>
-        <input class= "create_input" type="text" placeholder="Введите описание" 
-        name = "description" />  <br>
-        <input class= "create_input" type="text" placeholder="Жанр" 
-        name = "genre" />  <br>
-        <input class= "create_input" type="text" placeholder="Автор" 
-        name = "author" />  <br>
-        <input class= "create_input" type="datetime-local" placeholder="Год выпуска" 
-        name = "year" />  <br>
-        <input class= "create_input" type="datetime-local" placeholder="Дата поиска" 
-        name = "date" />  <br>
-        <input class= "create_input" type="number" placeholder="Цена" 
-        name = "price" />  <br>
-        
-        <button class= create_button> Добавить книгу</button>
+            <input class= "create_input" type="text" placeholder="Введите названия книги" 
+            name = "title" /> <br>
+            <input class= "create_input" type="text" placeholder="Подзаголовок"  
+            name = "subtitle" />  <br>
+            <input class= "create_input" type="text" placeholder="Введите описание" 
+            name = "description" />  <br>
+            <input class= "create_input" type="text" placeholder="Жанр" 
+            name = "genre" />  <br>
+            <input class= "create_input" type="text" placeholder="Автор" 
+            name = "author" />  <br>
+            <input class= "create_input" type="datetime-local" placeholder="Год выпуска" 
+            name = "year" />  <br>
+            <input class= "create_input" type="datetime-local" placeholder="Дата поиска" 
+            name = "date" />  <br>
+            <input class= "create_input" type="number" placeholder="Цена" 
+            name = "price" />  <br>
+            
+        <button class= create_button> Добавить книгу </button>
     </form>
-    <h1> books</h1>
+    </div>
+    <h1> BOOKS</h1>
+    <div class="book_container">
     {% for books in books %}
-    <div>
-        <H3>{{books.title}}</H3>
-        <H5>{{books.autor}}</H5>
-        <p>{{books.price}} </p>
-    </div> <hr>
-    {% endfor %}
+    
+        <div class="book_item">
+            <H3>{{books.title}}</H3>
+            <H5>{{books.subtitle}}</H5>
+            <p>{{books.description}}</p>
+            <p>{{books.genre}} </p>
+            <p>{{books.author}} </p>
+            <p>{{books.year}} </p>
+            <p>{{books.date}} </p>
+            <H4>{{books.price}}</H4>
+            <div class= "action_buttons">
+                <button> <a href="{% url 'delete-book' books.id %}"> <img src="{% static 'item/star.png' %}" /> </a> </button>
+            <button><a href="{% url 'delete-book' books.id %}"> <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/> </a> </button> 
+            </div>
+        </div> 
+        {% endfor %}
+    </div>
 </body>
 </html>

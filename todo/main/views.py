@@ -50,3 +50,13 @@ def delete_todo(request, id):
     todo.delete()
     return redirect(second)
 
+def delete_book(request, id):
+    books = Books.objects.get(id=id)
+    books.delete()
+    return redirect(books)
+
+def mark_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_favorite =True
+    todo.save()
+    return redirect(second)
