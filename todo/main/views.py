@@ -38,7 +38,7 @@ def add_book(request):
         description=form["description"],
         genre=form["genre"],
         author=form["author"],
-        year= form["year"][:10],
+        year= form["year"],
         date=form["date"][:10],
         price=form["price"],
     )
@@ -57,12 +57,18 @@ def delete_book(request, id):
 
 def mark_todo(request, id):
     todo = ToDo.objects.get(id=id)
-    todo.is_favorite =True
+    todo.is_favorite = not todo.is_favorite
     todo.save()
     return redirect(second)
 
 
-def details(request ,id):
+def details(request, id):
     books_object = Books.objects.get(id=id)
     return render(request, "books_detail.html", {"books_object": books_object} )
+
+def close_todo(request, id):
+    todo =ToDo.objects.get(id=id)
+    todo.is_closed = not todo.is_closed
+    todo.save()
+    return redirect(second)
 

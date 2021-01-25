@@ -52,11 +52,11 @@ h1{
     border: 2px solid #6afab2;
 }
 .fav_book_but{
-    padding: 12px 20px;
-    background-color: #225ba7;
-    border: 1px solid #452d99;
+    padding: 12px 10px;
+    background-color: #1363cc;
+    border: 1px solid #4423bd;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     text-transform: uppercase;
     border-radius: 3px;
     cursor: pointer;
@@ -65,31 +65,24 @@ h1{
     border: 1px solid #cc3300;
     box-shadow: 2px 2px 5px 3px #FCE4EC;
 }
-.del_book_but{
-    padding: 12px 20px;
+
+.det_book_but{padding: 12px 10px;
     background-color: #225ba7;
-    border: 1px solid #452d99;
+    border: 1px solid ##4423bd9;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     text-transform: uppercase;
     border-radius: 3px;
     cursor: pointer;
 }
-.del_book_but:active{
-    border: 1px solid #cc3300;
-    box-shadow: 2px 2px 5px 3px #FCE4EC;
-}
-.det_book_but{
-        padding: 12px 20px;
-        background-color: #225ba7;
-        border: 1px solid #452d99;
-        color: white;
-        font-size: 18px;
-        text-transform: uppercase;
-        border-radius: 3px;
-        cursor: pointer;
-    }
 .det_book_but:active{
         border: 1px solid #cc3300;
         box-shadow: 2px 2px 5px 3px #FCE4EC;
+}
+.action_buttons {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 30%;
 }

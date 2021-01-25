@@ -22,7 +22,7 @@
             name = "genre" />  <br>
             <input class= "create_input" type="text" placeholder="Автор" 
             name = "author" />  <br>
-            <input class= "create_input" type="datetime-local" placeholder="Год выпуска" 
+            <input class= "create_input" type="number" placeholder="Год выпуска" 
             name = "year" />  <br>
             <input class= "create_input" type="datetime-local" placeholder="Дата поиска" 
             name = "date" />  <br>
@@ -41,9 +41,9 @@
             <p>{{books.author}} </p>
             <H4>{{books.price}}</H4>
             <div class= "action_buttons">
-                <button class="fav_book_but"> <a href="{% url 'delete-book' books.id %}"> В Избранное </a> </button>
-            <button class="del_book_but"><a href="{% url 'delete-book' books.id %}"> <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/> </a> </button> 
-            <button class="det_book_but"><a href="{% url 'details' books.id %}"> Details </a> </button>
+                 <button class="fav_book_but"> <a href="{% url 'delete-book' books.id %}"> В Избранное </a> </button>
+                 <a href="{% url 'delete-book' books.id %}"> <img src="https://img.icons8.com/material-rounded/50/000000/delete.png"/> </a>  
+                 <button class="det_book_but"><a href="{% url 'details' books.id %}"> Details </a> </button>
             </div>
         </div> 
         {% endfor %}
