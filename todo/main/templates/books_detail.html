@@ -1,11 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/book.css' %}" />
     <title>Document</title>
 </head>
-<body>
+<body >
     <div class="book_item">
         <H3>{{books_object.title}}</H3>
         <H5>{{books_object.subtitle}}</H5>
@@ -16,11 +18,8 @@
         <p>{{books_object.date}} </p>
         <H4>{{books_object.price}}</H4> 
 
-            <div class= "action_buttons">
-                
-    
-            <button class="det_book_but"><a href="books.html"> Main </a> </button>
-            </div>
+            <button class="det_book_but"><a href="{% url 'book' %}">Назад </a></button>
+        
     </div> 
 </body>
 </html>

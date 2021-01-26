@@ -3,7 +3,7 @@ from .models import ToDo, Books
 
 
 def homepage(request):
-    return render(request, "index.html",)
+    return render(request, "index.html")
 
 def test(request):
     return render(request, "test.html")
@@ -51,8 +51,8 @@ def delete_todo(request, id):
     return redirect(second)
 
 def delete_book(request, id):
-    books = Books.objects.get(id=id)
-    books.delete()
+    b = Books.objects.get(id=id)
+    b.delete()
     return redirect(books)
 
 def mark_todo(request, id):
@@ -71,4 +71,15 @@ def close_todo(request, id):
     todo.is_closed = not todo.is_closed
     todo.save()
     return redirect(second)
+
+def f_book(request, id):
+    book = Books.objects.get(id=id)
+    book.is_favorite = not book.is_favorite
+    book.save()
+    return redirect(books)
+
+def book(request):
+    return render(request, "books.html", )
+
+
 
