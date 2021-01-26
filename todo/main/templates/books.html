@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'style/book.css' %}" />
-    <title>Document</title>
+    <title>Books_page</title>
 </head>
-<body  background= "{% static 'item/image_2.jpg' %}" > 
+<body background="{% static 'item/img_5.jpg'%}"> 
 <section>
-  <div class="header"> <h1> BOOKS</h1> </div> 
+  <div class="header"> 
+    <img src="{% static 'item/logo.png' %}"/>
+ </div> 
     <div class="create_container">
         <form action="{% url 'add-book' %}" method="POST">
         {% csrf_token %}
@@ -37,7 +39,7 @@
     {% for books in books %}
         <div class="book_item 
             {% if todo.is_favorite %}
-             fav
+                    fav
              {% endif %} ">
             <H3>{{books.title}}</H3>
             <p>{{books.author}} </p>

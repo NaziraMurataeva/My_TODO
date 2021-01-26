@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{% static 'style/book.css' %}" />
     <title>Document</title>
 </head>
-<body >
-    <div class="book_item">
+<body background="{% static 'item/img_5.jpg'%}">  
+    <div class="detail">
         <H3>{{books_object.title}}</H3>
         <H5>{{books_object.subtitle}}</H5>
         <p>{{books_object.description}}</p>
@@ -17,9 +17,9 @@
         <p>{{books_object.year}} </p>
         <p>{{books_object.date}} </p>
         <H4>{{books_object.price}}</H4> 
-
-            <button class="det_book_but"><a href="{% url 'book' %}">Назад </a></button>
+    </div>
+         <button class="det_book_but"><a href="{% url 'books' %}">Назад </a></button>
         
-    </div> 
+    
 </body>
 </html>

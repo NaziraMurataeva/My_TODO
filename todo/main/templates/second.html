@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/checkbox.css" /> -->
     <link rel="stylesheet" href="{% static 'style/index.css' %}" />
     <link rel="stylesheet" href="{% static 'style/checkbox.css' %}" />
-    <title>second page</title>
+    <title>ToDo</title>
 </head>
 <body>
     <section>
@@ -38,7 +38,7 @@
                      {% endif %} />
                     <span class="checkmark"></span>
                 </label>
-                <h4> <a href="{% url 'close-todo' todo.id %}">{{todo.text}} </a> </h4>
+                <h4> <a href="{% url 'close-todo' todo.id %}">{{todo.text}}</a> </h4>
             </div>
             <div class= "todo_item_footer">
                 <p>{{ todo.created_at }}</p>

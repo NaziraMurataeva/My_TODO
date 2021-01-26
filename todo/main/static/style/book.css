@@ -1,21 +1,35 @@
 
+body{
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.header { 
+    text-align: center;
+   
+
+}
 .create_container{
     width: 60%;
+    margin-left:20%;
+      
 }
 .create_input{
     padding: 10px 5px;
     font-size: 15px;
     width: 80%;
+    margin-bottom: 5px;
+    
 }
 
 .create_button{
     padding: 12px 20px;
-    background-color: #225ba7;
-    border: 1px solid #452d99;
+    background-color: #3BA4C7;;
+    border: 2px solid #ababac;
     color: white;
     font-size: 18px;
     text-transform: uppercase;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
 }
 .create_button:active{
@@ -23,12 +37,7 @@
     box-shadow: 2px 2px 5px 3px #FCE4EC;
 }
 
-h1{
-    text-align: center;
-    font: size 25px;
-    font-family: fantasy;
-    text-transform: uppercase;
-}
+
 .book_container{
     padding: 30px 20px;
     display: flex;
@@ -37,16 +46,16 @@ h1{
     width: 100%;
 }
 .book_item{
-   
+    background-color: white;
+    opacity: 80%;
     border:1px solid gray;
     border-radius: 5px;
     width: 24%;
     padding:10px 15px ;
-    background-color:violet;
     margin-bottom: 20px;
 }
 .book_item.fav{
-    background-color: #82ff91;
+    background-color: #9bc86d;
     border: 2px solid #6afab2;
 }
 .buttons{
@@ -60,17 +69,33 @@ h1{
 
 button{
     padding: 12px 20px;
-    background-color: #0d72f7;
-    border: 1px solid #452d99;
+    text-align:center; 
+    font-weight:bold; 
+    background-color:#3BA4C7; 
+    border: 1px solid#ababac;
     color: white;
     font-size: 12px;
     text-transform: uppercase;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
 }
 a{
     color:white;
+    text-decoration: none;
 
+}
+.detail{
+    background-color: white;
+    opacity: 70%;
+    border:1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+    padding:10px 15px ;
+    margin-bottom: 20px;
+    font: 1.5em sans-serif;
+}
+h3{
+    text-align: center;
 }
 
 
