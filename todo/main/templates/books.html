@@ -38,9 +38,9 @@
     <div class="book_container">
     {% for books in books %}
         <div class="book_item 
-            {% if todo.is_favorite %}
-                    fav
-             {% endif %} ">
+            {% if books.is_fav %}
+                    marked
+             {% endif %} " >
             <H3>{{books.title}}</H3>
             <p>{{books.author}} </p>
             <p>{{books.price}}</p>

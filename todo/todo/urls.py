@@ -24,7 +24,7 @@ urlpatterns = [
     path("",homepage, name="home"),
     path("test2", second, name="test2"),
     path("test3", third, ),
-    path("test4", somepage, ),
+    path("test4", somepage, name="test4"),
     path("books/", books, name = "books"),
     path("add-todo/", add_todo, name ="add-todo"),
     path("add-book/", add_book, name = "add-book"),

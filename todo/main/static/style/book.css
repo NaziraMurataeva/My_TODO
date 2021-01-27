@@ -45,6 +45,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
+
 .book_item{
     background-color: white;
     opacity: 80%;
@@ -54,9 +55,10 @@ body{
     padding:10px 15px ;
     margin-bottom: 20px;
 }
-.book_item.fav{
-    background-color: #9bc86d;
-    border: 2px solid #6afab2;
+
+.book_item.marked{
+    background-color: #ffe082;
+    border: 2px solid #fad66a;
 }
 .buttons{
     padding: 5px;

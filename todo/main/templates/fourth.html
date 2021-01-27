@@ -1,11 +1,19 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style/index.css' %}" />
+   
+    <title>main_page</title>
 </head>
-<body>
-    <script> alert('Ваша запись была удалена') </script>
+<body  background="{% static 'item/plant.jpg'%}"></body>>
+    <div class="main_page">
+        <div><a href=" {% url 'books' %}" > BOOKS</a> </div> 
+        <div><a href=" {% url 'test2' %}" >TODO</a> </div>
+        <div><a href=" {% url 'test4' %}" >INDEX</a> </div>
+    </div>
 </body>
 </html>

@@ -3,7 +3,7 @@ from .models import ToDo, Books
 
 
 def homepage(request):
-    return render(request, "index.html")
+    return render(request, "fourth.html")
 
 def test(request):
     return render(request, "test.html")
@@ -17,7 +17,7 @@ def third(request):
     return render(request, "third.html", )
 
 def somepage(request):
-    return render(request, "fourth.html")
+    return render(request, "index.html")
 
 def books(request):
     books = Books.objects.all()
@@ -74,7 +74,7 @@ def close_todo(request, id):
 
 def f_book(request, id):
     book = Books.objects.get(id=id)
-    book.is_favorite = not book.is_favorite
+    book.is_fav = not book.is_fav
     book.save()
     return redirect(books)
 

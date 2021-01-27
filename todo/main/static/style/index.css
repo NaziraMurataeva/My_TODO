@@ -4,7 +4,33 @@
     padding: 0;
     color: #283238
 }
+body{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 640px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.main_page{
+    background: rgb(174, 214, 230);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
 
+}
+
+.main_page div{
+    width: 30%;
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+}
 section{
     width: 100%;
     padding: 20px;
